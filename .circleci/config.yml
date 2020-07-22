@@ -8,5 +8,5 @@ jobs:
     steps:
       - checkout
       - run: docker volume create node_modules
-      - run: docker run --rm -v node_modules:/code/node_modules mrsleeth/v2l:node10 ls
+      - run: docker run --rm -v node_modules:/code/node_modules mrsleeth/v2l:node10 ls -la
       - run: docker run --rm mrsleeth/v2l:node10 ls -la /code/node_modules
