@@ -3,8 +3,10 @@ version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: mrsleeth/v2l:node10
+    machine:
+      image: ubuntu-1604:202007-01
     steps:
       - checkout
-      - run: ls -la
+      - run: docker volume create node_modules
+      - run: docker run --rm -v node_modules:/code/node_modules mrsleeth/v2l:node10
+      - run: docker run --rm mrsleeth/v2l:node10 ls -la /code/node_modules
