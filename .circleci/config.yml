@@ -9,4 +9,3 @@ jobs:
       - checkout
       - run: docker volume create node_modules
       - run: docker run --rm --entrypoint ls -v node_modules:/code/node_modules mrsleeth/v2l:node10
-      - run: docker run --rm --entrypoint ls -la /code/node_modules mrsleeth/v2l:node10
