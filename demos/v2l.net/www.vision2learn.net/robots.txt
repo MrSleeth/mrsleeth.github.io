@@ -1,0 +1,5 @@
+﻿User-agent: *
+Disallow: /Admin/
+Disallow: /Error/
+Disallow: /Application/
+Disallow: /Channels/
